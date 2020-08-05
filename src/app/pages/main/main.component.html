@@ -1,0 +1,13 @@
+<div  fxLayout="row wrap" fxLayoutAlign="center center">
+    <div  fxLayout="column wrap" fxLayoutAlign="space-between center" class="products" *ngFor = "let product of products" [routerLink]="['/products', product.id]">
+    <li class="name">{{product.title}}</li>
+    <li><img [src]="product.thumbnailURL[0].image"></li>
+    <li class="price">{{product.priceHR}}</li>
+    </div>
+</div>
+<div class="paginacion" >
+    <p class="paginacionP">Ver más productos:</p>
+    <select name="miselectPages" [(ngModel)]="seleccionadoPage" [routerLink]="['']" [queryParams]="{Page: seleccionadoPage}">
+        <option [value]="item" *ngFor="let item of pages">{{item}}</option>
+    </select> 
+</div>
