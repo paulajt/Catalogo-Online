@@ -9,12 +9,12 @@
                     <li *ngFor = "let opcion of categorias"[routerLink]="['/categoria', opcion]"><span >{{opcion}}</span></li>
                 </ul>
                 </li>
-                <li class="button">
+                <!--<li class="button">
                     <label class="button2">Actualizar Productos<input id = "excel" type="file" style="visibility:hidden" class ="upload" (change)= "onFileChange($event)" a="Actualizar Productos"></label>
                 </li>
                 <li class="button">
                     <span [ngClass]="{show: excelUpdated, hidden: !excelUpdated}" (click)="refresh()">Recargar</span>
-                </li>
+                </li>-->
 
             </ul>
 
